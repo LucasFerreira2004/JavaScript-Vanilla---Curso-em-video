@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Teste de nacionalidade</h1>
+    Em que pais você nasceu: <input type="text" name="paisNascimento" id="paisNascimento">
+    <input type="button" value="Enviar" id="enviar">
+    <div id="res">Nacionalidade: </div>
+
+    <script>
+        document.getElementById('enviar').
+        addEventListener('click', nacionalidade)
+
+        var divRes= document.getElementById('res')
+
+        function nacionalidade(){
+            var paisNascimento= document.getElementById('paisNascimento').value
+
+            if (paisNascimento.toUpperCase()== "BRASIL") {
+                divRes.innerHTML= `<p>Você é brasileiro</p>`       
+            }else{
+                divRes.innerHTML= `<p>Você é estrangeiro</p>`       
+            }
+        }
+    </script>
+</body>
+</html>
